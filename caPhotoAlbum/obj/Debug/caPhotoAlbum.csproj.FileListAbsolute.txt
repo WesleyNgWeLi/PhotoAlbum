@@ -1,0 +1,8 @@
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\bin\Debug\caPhotoAlbum.exe.config
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\bin\Debug\caPhotoAlbum.exe
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\bin\Debug\caPhotoAlbum.pdb
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\bin\Debug\Newtonsoft.Json.dll
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\bin\Debug\Newtonsoft.Json.xml
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\obj\Debug\caPhotoAlbum.csprojResolveAssemblyReference.cache
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\obj\Debug\caPhotoAlbum.exe
+F:\User\VisualStudioProjects\PhotoAlbum\caPhotoAlbum\obj\Debug\caPhotoAlbum.pdb

@@ -11,12 +11,14 @@ namespace caPhotoAlbum
         static void Main(string[] args)
         {
             string loop = "Y";
-            while (loop == "Y")
+            //Simple loop for user to get more than 1 album
+            while (loop == "Y" || loop == "y")
             {
                 DataHelper DH = new DataHelper();
-                int photoAlbumID = DH.GetPhotoAlbumID();
+                int photoAlbumID = DH.GetAlbumID();
                 string URL = DH.BuildURL(photoAlbumID);
-                List<ImageModel> m = DH.PopulateImageModel(URL);
+                string JSONData = DH.GetJSON(URL);
+                List<ImageModel> m = DH.PopulateImageModel(JSONData);
                 DH.OutputData(m);
                 Console.WriteLine("Do you want to get another photo album? (Y/N)");
                 loop = Console.ReadLine();

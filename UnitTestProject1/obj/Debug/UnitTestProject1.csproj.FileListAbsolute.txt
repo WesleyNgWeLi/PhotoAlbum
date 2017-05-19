@@ -7,3 +7,7 @@ F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\bin\Debug\Newtonsoft.Js
 F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\bin\Debug\Castle.Core.dll
+F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\bin\Debug\Moq.dll
+F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\bin\Debug\Castle.Core.xml
+F:\User\VisualStudioProjects\PhotoAlbum\UnitTestProject1\bin\Debug\Moq.xml

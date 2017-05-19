@@ -10,11 +10,21 @@ namespace caPhotoAlbum
 {
     public class DataHelper
     {
+        /// <summary>
+        /// Returns URL with PA(PhotoAlbum) appended
+        /// </summary>
+        /// <param name="PA"></param>
+        /// <returns></returns>
         public string BuildURL(int PA)
         {
             return "https://jsonplaceholder.typicode.com/photos?albumId=" + PA.ToString();
         }
 
+        /// <summary>
+        /// Pulls JSON data from API and returns it
+        /// </summary>
+        /// <param name="URL"></param>
+        /// <returns></returns>
         public string GetJSON(string URL)
         {
             using (WebClient wc = new WebClient())
@@ -23,13 +33,21 @@ namespace caPhotoAlbum
             }
         }
 
-        public List<ImageModel> PopulateImageModel(string URL)
+        /// <summary>
+        /// Deserializes JsonData into List of Image Models, returns List of ImageModels
+        /// </summary>
+        /// <param name="JsonData"></param>
+        /// <returns></returns>
+        public List<ImageModel> PopulateImageModel(string JsonData)
         {
-            string JsonData = GetJSON(URL);
             List<ImageModel> m = JsonConvert.DeserializeObject<List<ImageModel>>(JsonData);
             return m;
         }
 
+        /// <summary>
+        /// Writes formatted output to console
+        /// </summary>
+        /// <param name="m"></param>
         public void OutputData(List<ImageModel> m )
         {
             foreach(ImageModel n in m)
@@ -38,33 +56,38 @@ namespace caPhotoAlbum
             }
         }
 
+        /// <summary>
+        /// Formats Output 
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public string FormatOutput(ImageModel n)
         {
             return "[" + n.PhotoID + "] " + n.Title;
         }
-        public int GetPhotoAlbumID()
-        {
-            int photoAlbumID;
-            Console.WriteLine("Please enter number");
-            photoAlbumID = GetConsoleInput();
-            while (photoAlbumID == -1)
-            {
-                Console.WriteLine("Error Input: Please enter a number!");
-                photoAlbumID = GetConsoleInput();
-            }
-            return photoAlbumID;
-        }
 
-        public int GetConsoleInput()
+        /// <summary>
+        /// Recursive Function that will keep going until a Positive Int is returned inputted.
+        /// </summary>
+        /// <returns></returns>
+        public int GetAlbumID()
         {
-            try
-            {
-                return int.Parse(Console.ReadLine());
-            }
-            catch
-            {
-                return -1;
-            }
+           Console.WriteLine("Please input a positive number Album Id");
+           string input = Console.ReadLine();
+           int albumId;
+           if(int.TryParse(input, out albumId) && validateAlbumInput(albumId))
+           {
+              return albumId;
+           } 
+           else
+           {
+               Console.WriteLine("Invalid AlbumID entered! Please enter a positive number.");
+               return GetAlbumID();
+           }
+        }
+        public bool validateAlbumInput(int albumID)
+        {
+            return albumID > 0;
         }
     }
 }
